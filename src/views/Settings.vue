@@ -25,6 +25,7 @@
             font-awesome-icon(:icon='["fas", "toggle-on"]')
         #audio.mb-2.d-flex.justify-content-between
           div Audio
+          b-form-select(v-model="selected" :options="options")
           button
             span.mr-2 basic
             font-awesome-icon(:icon='["fas", "chevron-down"]')
@@ -48,6 +49,13 @@ export default {
         { key: 'name', label: '名稱' },
         { key: 'src', label: '試聽' },
         { key: 'select', label: '選擇' }
+      ],
+
+      // 音效選項
+      selected: null,
+      options: [
+        { value: null, text: 'Please select some item' },
+        { value: 'a', text: 'This is First option' }
       ]
     }
   },
