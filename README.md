@@ -3,7 +3,7 @@
 
 **必須使用前端修練精神時光屋的番茄鐘設計稿**
 **請將投稿作品上傳到自己的 GitHub 儲存庫**  
-**最後將本檔案下方的作業連結改為自己的前端修練精神時光屋個人檔案公開頁面 https://challenge.thef2e.com/user/4139 
+**最後將本檔案下方的作業連結改為自己的前端修練精神時光屋個人檔案公開頁面 https://challenge.thef2e.com/user/4207
 **未修改連結視同零分**
 
 ## 繳交時間
@@ -23,4 +23,4 @@
 若使用 GitHub 網頁進行 commit 會依次數扣分
 
 ## 作業連結
-- [精神時光屋個人檔案](https://challenge.thef2e.com/user/4139)
+- [精神時光屋個人檔案](https://challenge.thef2e.com/user/4207)
