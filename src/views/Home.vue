@@ -1,22 +1,21 @@
 <template lang="pug">
 #home
-    #background
-        #bg1
-        #bg2
-        #bg3
-        #bg4
+  #background
+    #bg1
+    #bg2
+    #bg3
+    #bg4
 
-    router-link(to="./list")
-      #menu
+  router-link(to="./list")
+    #menu
 
-    #add_bar1
-      //- 這邊真的不懂為什麼會有 'additem' method undefine 的錯誤
-      b-form-input#b-form-input(v-model='newitem' :state='state' trim @keydown.enter='additem' placeholder="Add a new mission...")
-      #add_btn(@click='additem')
+  #add_bar1
+    b-form-input#b-form-input(v-model='newitem' :state='state' trim @keydown.enter='additem' placeholder="Add a new mission...")
+    button#add_btn(@click='additem')
 
-    Alarm
+  Alarm
 
-    Function
+  Function
 </template>
 
 <script>
@@ -49,7 +48,7 @@ export default {
       }
     }
   },
-  method: {
+  methods: {
     additem () {
       if (this.state) {
         this.$store.commit('addList', this.newitem)

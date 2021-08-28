@@ -132,8 +132,10 @@ export default {
 
       if (!skip) {
         const audio = new Audio()
-        audio.src = require('../assets/' + this.$store.state.sound)
-        audio.play()
+        if (this.$store.state.sound !== 'mute') {
+          audio.src = require('../assets/' + this.$store.state.sound)
+          audio.play()
+        }
       }
 
       if (this.list.length > 0) {
@@ -141,7 +143,8 @@ export default {
       } else {
         this.$swal({
           icon: 'success',
-          title: '結束'
+          title: '恭喜你！',
+          text: '已完成所有代辦事項'
         })
       }
     },

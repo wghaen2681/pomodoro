@@ -1,406 +1,411 @@
 :root
-    --red #BC2B35
-    --light--red #e94147
-    --gold #f2f0c9
+  --red #BC2B35
+  --light--red #e94147
+  --gold #f2f0c9
 
 #header
-    #logo
-        position absolute
-        top 4vh
-        left 3vw
-        width 9vw
-        height 4vh
-        background center / contain no-repeat url('../assets/Group 1.png')
-        opacity: 1
+  #logo
+    position absolute
+    top 4vh
+    left 3vw
+    width 9vw
+    height 4vh
+    background center / contain no-repeat url('../assets/Group 1.png')
+    opacity: 1
 
-    #sublogo
-        position absolute
-        top 5vh
-        left 14vw
-        width 11vw
-        height 2vh
-        background center / contain no-repeat url('../assets/To-Do-List Alarm System.png')
-        opacity 1
+  #sublogo
+    position absolute
+    top 5vh
+    left 14vw
+    width 11vw
+    height 2vh
+    background center / contain no-repeat url('../assets/To-Do-List Alarm System.png')
+    opacity 1
 
-    div:nth-child(2) 
-        position absolute
-        top 4vh
-        left 13vw
-        width 0
-        height 4vh
-        border-left 1px solid var(--gold)
+  div:nth-child(2) 
+    position absolute
+    top 4vh
+    left 13vw
+    width 0
+    height 4vh
+    border-left 1px solid var(--gold)
 
 #timer_container
-    width 33vw
-    height 33vw
-    // 位置 / 大小
-    background center / contain no-repeat url('../assets/Subtraction 3.png')
-    color var(--gold)
+  width 33vw
+  height 33vw
+  // 位置 / 大小
+  background center / contain no-repeat url('../assets/Subtraction 3.png')
+  color var(--gold)
 
-    #title
-        font-family Century Gothic
-        font-style regular
-        font-size 3vh
-        letter-spacing 0.3vh 
+  #title
+    font-family Century Gothic
+    font-style regular
+    font-size 3vh
+    letter-spacing 0.3vh 
 
-    #timer > *
-        font-size 8vh
-        letter-spacing 1.6vh 
+  #timer > *
+    font-size 8vh
+    letter-spacing 1.6vh 
 
-    // 為什麼下面這個沒用
-    // #colon
-    //     line-height 114px
+  // 為什麼下面這個沒用
+  // #colon
+  //   line-height 114px
 
-    #alarm
-        width 3.5vw
-        height 3.5vw
-        background center / contain no-repeat url('../assets/Group 15.png')
-    #mute
-        width 3.5vw
-        height 3.5vw
-        background center / contain no-repeat url('../assets/Group 13.png')
-    #play
-        width 3.5vw
-        height 3.5vw
-        background center / contain no-repeat url('../assets/Group 17.png')
-    #pause
-        width 3.5vw
-        height 3.5vw
-        background center / contain no-repeat url('../assets/Group 14.png')
-    #skip
-        width 3.5vw
-        height 3.5vw
-        background center / contain no-repeat url('../assets/Group 16.png')
+  #alarm
+    width 3.5vw
+    height 3.5vw
+    background center / contain no-repeat url('../assets/Group 15.png')
+  #mute
+    width 3.5vw
+    height 3.5vw
+    background center / contain no-repeat url('../assets/Group 13.png')
+  #play
+    width 3.5vw
+    height 3.5vw
+    background center / contain no-repeat url('../assets/Group 17.png')
+  #pause
+    width 3.5vw
+    height 3.5vw
+    background center / contain no-repeat url('../assets/Group 14.png')
+  #skip
+    width 3.5vw
+    height 3.5vw
+    background center / contain no-repeat url('../assets/Group 16.png')
 
 #next
-    color var(--gold)
-    opacity 0.5
+  color var(--gold)
+  opacity 0.5
 
-    *
-        font-family Century Gothic
-        font-style regular
-        font-size 2vh
-        letter-spacing 0.2vh
+  *
+    font-family Century Gothic
+    font-style regular
+    font-size 2vh
+    letter-spacing 0.2vh
 
 #funtion
-    #btn1
-        display block
-        width 4vw
-        height 4vw
-        margin-bottom 1vw
-        background center / contain no-repeat url('../assets/Group 18.png')
+  #btn1
+    display block
+    width 4vw
+    height 4vw
+    margin-bottom 1vw
+    background center / contain no-repeat url('../assets/Group 18.png')
 
-    #btn2
-        display block
-        width 4vw
-        height 4vw
-        margin-bottom 1vw
-        background center / contain no-repeat url('../assets/Group 19.png')
+  #btn2
+    display block
+    width 4vw
+    height 4vw
+    margin-bottom 1vw
+    background center / contain no-repeat url('../assets/Group 19.png')
 
-    #btn3
-        display block
-        width 4vw
-        height 4vw
-        margin-bottom 1vw
-        background center / contain no-repeat url('../assets/Group 20.png')
+  #btn3
+    display block
+    width 4vw
+    height 4vw
+    margin-bottom 1vw
+    background center / contain no-repeat url('../assets/Group 20.png')
 
 #app
-    width 100vw
-    height 100vh
-    background var(--red) 0% 0% no-repeat padding-box
-    opacity 1
-    color var(--gold)
+  width 100vw
+  height 100vh
+  background var(--red) 0% 0% no-repeat padding-box
+  opacity 1
+  color var(--gold)
 
-    #home
-        #background
-            #bg1
-                position absolute
-                left 48vh
-                width 16vw
-                height 12vh
-                // 左右 上下 / 寬度 高度
-                background center top / contain no-repeat url('../assets/Intersection 2.png')
-                opacity 1
+  #home
+    #background
+      #bg1
+        position absolute
+        left 48vh
+        width 16vw
+        height 12vh
+        // 左右 上下 / 寬度 高度
+        background center top / contain no-repeat url('../assets/Intersection 2.png')
+        opacity 1
 
-            #bg2
-                position absolute
-                top 18vh
-                width 19vw
-                height 66vh
-                // 左右 上下 / 寬度 高度
-                background left / contain no-repeat url('../assets/Subtraction 4.png')
-                opacity 1
+      #bg2
+        position absolute
+        top 18vh
+        width 19vw
+        height 66vh
+        // 左右 上下 / 寬度 高度
+        background left / contain no-repeat url('../assets/Subtraction 4.png')
+        opacity 1
 
-            #bg3
-                position absolute
-                top 18vh
-                right 0
-                width 19vw
-                height 66vh
-                // 左右 上下 / 寬度 高度
-                background right / contain no-repeat url('../assets/Subtraction 5.png')
-                opacity 1
+      #bg3
+        position absolute
+        top 18vh
+        right 0
+        width 19vw
+        height 66vh
+        // 左右 上下 / 寬度 高度
+        background right / contain no-repeat url('../assets/Subtraction 5.png')
+        opacity 1
 
-            #bg4
-                position absolute
-                bottom 0
-                left 63vw
-                width 24vw
-                height 18vh
-                // 左右 上下 / 寬度 高度
-                background bottom / contain no-repeat url('../assets/Intersection 1.png')
-                opacity 1
+      #bg4
+        position absolute
+        bottom 0
+        left 63vw
+        width 24vw
+        height 18vh
+        // 左右 上下 / 寬度 高度
+        background bottom / contain no-repeat url('../assets/Intersection 1.png')
+        opacity 1
 
-        #menu
-            position absolute
-            top 5vh
-            right 5vw
-            width 3vw
-            height 4vh
-            background center / contain no-repeat url('../assets/Group 2.png')
-            opacity 1
+    #menu
+      position absolute
+      top 5vh
+      right 5vw
+      width 3vw
+      height 4vh
+      background center / contain no-repeat url('../assets/Group 2.png')
+      opacity 1
 
-        #add_bar1
-            position absolute
-            top 53vh
-            left 5vw
-            transform translateY(-50%)
-            width 16vw
-            height 30px
-            border-bottom 1px solid var(--gold)
+    #add_bar1
+      position absolute
+      top 53vh
+      left 5vw
+      transform translateY(-50%)
+      width 16vw
+      height 30px
+      border-bottom 1px solid var(--gold)
 
-            // 為什麼可以抓到 span 標籤，但是抓不到 b-form-input 這個標籤
-            #b-form-input
-                position absolute
-                top 12px
-                transform translateY(-50%)
-                font-size 1vw
-                width 100%
-                border none
-                background inherit
-                font-family Century Gothic
-                color var(--gold)
-                
-                &::placeholder
-                    color color var(--gold)
-                    opacity 0.55
-
-            #add_btn
-                position absolute
-                top 12px
-                right 0
-                transform translateY(-50%)
-                width 1vw
-                height 1vw
-                background center / contain no-repeat url('../assets/Group 22.png')
+      // 為什麼可以抓到 span 標籤，但是抓不到 b-form-input 這個標籤
+      #b-form-input
+        position absolute
+        top 12px
+        transform translateY(-50%)
+        font-size 1vw
+        width 100%
+        border none
+        background inherit
+        font-family Century Gothic
+        color var(--gold)
         
-        #timer_container
-            position absolute
-            top 53vh
-            left 50vw
-            transform translate(-50%, -50%)
+        &::placeholder
+          color color var(--gold)
+          opacity 0.55
 
-        #next
-            position absolute
-            bottom 7.5vh
-            left 50vw
-            transform translateX(-50%)
+      #add_btn
+        position absolute
+        top 12px
+        right 0
+        transform translateY(-50%)
+        width 1vw
+        height 1vw
+        border none
+        background center / contain no-repeat url('../assets/Group 22.png')
+    
+    #timer_container
+      position absolute
+      top 53vh
+      left 50vw
+      transform translate(-50%, -50%)
 
-        #funtion
-            position absolute
-            top 53vh
-            right 4vw
-            transform translateY(-50%)
+    #next
+      position absolute
+      bottom 7.5vh
+      left 50vw
+      transform translateX(-50%)
 
-    #list, #chart, #settings
-        #page
-            #background
-                #bg1
-                    position absolute
-                    top 50vh
-                    transform: translateY(-50%)
-                    width 19vw
-                    height 66vh
-                    // 左右 上下 / 寬度 高度
-                    background left top / contain no-repeat url('../assets/Subtraction 6.png')
-                    opacity 1
+    #funtion
+      position absolute
+      top 53vh
+      right 4vw
+      transform translateY(-50%)
 
-                #bg2
-                    position absolute
-                    top 50vh
-                    right 0
-                    transform translateY(-50%)
-                    width 47vw
-                    height 100vh
-                    // 左右 上下 / 寬度 高度
-                    background right / contain no-repeat url('../assets/Path 9.png')
-                    opacity 1
+  #list, #chart, #settings
+    #page
+      #background
+        #bg1
+          position absolute
+          top 50vh
+          transform: translateY(-50%)
+          width 19vw
+          height 66vh
+          // 左右 上下 / 寬度 高度
+          background left top / contain no-repeat url('../assets/Subtraction 6.png')
+          opacity 1
 
-        #close_icon
-            position absolute
-            top 4vh
-            right 4vw
-            width 3vw
-            height 3vw
+        #bg2
+          position absolute
+          top 50vh
+          right 0
+          transform translateY(-50%)
+          width 47vw
+          height 100vh
+          // 左右 上下 / 寬度 高度
+          background right / contain no-repeat url('../assets/Path 9.png')
+          opacity 1
 
-        #timer_container
-            position absolute
-            top 53vh
-            left 9vw
-            transform translateY(-50%)
+    #close_icon
+      position absolute
+      top 4vh
+      right 4vw
+      width 3vw
+      height 3vw
 
-        #next
-            position absolute
-            bottom 7.5vh
-            left 19vw
+    #timer_container
+      position absolute
+      top 53vh
+      left 9vw
+      transform translateY(-50%)
 
-        #funtion
-            position absolute
-            top 50vh
-            left 50vw
-            transform translate(-50%, -50%)
+    #next
+      position absolute
+      bottom 7.5vh
+      left 19vw
 
-    #list
-        #add_bar2
-            position absolute
-            top 18vh
-            right 4vw
-            width 32vw
-            height 5vh
-            // border-radius 可以有兩個值，上下 / 左右
-            // border-radius 1%/10%
-            border-radius 6px
-            background-color var(--gold)
-            color var(--red)
-            line-height 5vh
+    #funtion
+      position absolute
+      top 50vh
+      left 50vw
+      transform translate(-50%, -50%)
 
-            #b-form-input
-                display inline-block
-                width 100%
-                border none
-                background inherit
-                font-family Century Gothic
-                
-                &::placeholder
-                    color var(--red)
-                    opacity 0.55
+  #list
+    #add_bar2
+      position absolute
+      top 18vh
+      right 4vw
+      width 32vw
+      height 5vh
+      // border-radius 可以有兩個值，上下 / 左右
+      // border-radius 1%/10%
+      border-radius 6px
+      background-color var(--gold)
+      color var(--red)
+      line-height 5vh
 
-            span
-                margin-left 18px
-                opacity 0.55
+      #b-form-input
+        display inline-block
+        width 100%
+        border none
+        background inherit
+        font-family Century Gothic
+        
+        &::placeholder
+          color var(--red)
+          opacity 0.55
 
-            #btn_plus
-                position absolute
-                top 2.5vh
-                right 0
-                transform translateY(-50%)
-                margin-right 18px
-                font-size 1.2rem
+      span
+        margin-left 18px
+        opacity 0.55
 
-        #chart
-            #title
-                position absolute
-                top 26vh
-                right 4vw
-                width 32vw
-                height 6vh
-                border-radius 6px 6px 0 0
-                background-color var(--light--red)
-
-                #icon
-                    position relative
-                    top 3vh
-                    left 3vh
-                    transform translate(-50%, -50%)
-                    width 2vh
-                    height 6vh
-                    // color var(--gold)
-
-                #month_control
-                    position relative
-                    top 50%
-                    left 50%
-                    transform translate(-50%, -50%)
-                    width 180px
-                    // color var(--gold)
-                    line-height 6vh
-
-            #frame
-                position absolute
-                top 32vh
-                right 4vw
-                width 32vw
-                height 45vh
-                border-radius 0 0 6px 6px
-                background-color var(--red)
-                overflow hidden
-
-                table
-                    color var(--gold)
+      #btn_plus
+        position absolute
+        top 2.5vh
+        right 0
+        transform translateY(-50%)
+        margin-right 18px
+        font-size 1.2rem
+        
+        &:hover
+          cursor pointer
 
     #chart
-        #data
-            position absolute
-            top 18vh
-            right 9vw
-            width 30vw
-            height 63vh
-            font-family Century Gothic
-            font-weight 330
+      #title
+        position absolute
+        top 26vh
+        right 4vw
+        width 32vw
+        height 6vh
+        border-radius 6px 6px 0 0
+        background-color var(--light--red)
 
-            #statistics > * > div:first-child {
-                font-size 24px
-            }
+        #icon
+          position relative
+          top 3vh
+          left 3vh
+          transform translate(-50%, -50%)
+          width 2vh
+          height 6vh
+          // color var(--gold)
 
-            #statistics > * > div:nth-child(2) {
-                font-size 60px
-            }
+        #month_control
+          position relative
+          top 50%
+          left 50%
+          transform translate(-50%, -50%)
+          width 180px
+          // color var(--gold)
+          line-height 6vh
 
-        #figure
-            position relative
-            bottom 0
-            right 0
-            width 30vw
-            height 36vh
+      #frame
+        position absolute
+        top 32vh
+        right 4vw
+        width 32vw
+        height 45vh
+        border-radius 0 0 6px 6px
+        background-color var(--red)
+        overflow hidden
 
-    #settings
-        #frame
-            position absolute
-            top 29vh
-            right 10vw
-            width 28vw
-            height 41vh
-            color var(--gold)
-            font-family Century Gothic
-            font-weight 340
-            font-size 1.25vw
+        table
+          color var(--gold)
 
-            .container * {
-                height 35px
-                font-size 1vw
-            }
+  #chart
+    #data
+      position absolute
+      top 18vh
+      right 9vw
+      width 30vw
+      height 63vh
+      font-family Century Gothic
+      font-weight 330
 
-            #working_time, 
-            #resting_time,
-            #volume,
-            #audio
-                border-bottom 1px dashed var(--gold)
+      #statistics > * > div:first-child {
+        font-size 24px
+      }
 
-                #audioSetting
-                    transform translateX(5px)
-                    width 80px
-                    height 33px
-                    border transparent
-                    background-color transparent
-                    color var(--gold)
-                    font-weight inherit
-            
-            button
-                border: none;
-                background-color: inherit;
-                color inherit
-                font-weight inherit
-                font-family inherit
+      #statistics > * > div:nth-child(2) {
+        font-size 60px
+      }
+
+    #figure
+      position relative
+      bottom 0
+      right 0
+      width 30vw
+      height 36vh
+
+  #settings
+    #frame
+      position absolute
+      top 29vh
+      right 10vw
+      width 28vw
+      height 41vh
+      color var(--gold)
+      font-family Century Gothic
+      font-weight 340
+      font-size 1.25vw
+
+      .container * {
+        height 40px
+        padding 3px 0
+        font-size 1vw
+      }
+
+      #working_time, 
+      #resting_time,
+      #volume,
+      #audio
+        border-bottom 1px dashed var(--gold)
+
+        #audioSetting
+          transform translateX(5px)
+          width 80px
+          height 33px
+          border transparent
+          background-color transparent
+          color var(--gold)
+          font-weight inherit
+      
+      button
+        border: none;
+        background-color: inherit;
+        color inherit
+        font-weight inherit
+        font-family inherit
 
 
 

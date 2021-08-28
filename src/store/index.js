@@ -9,6 +9,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    work: time,
+    rest: timeBreak,
+    mute: false,
     sound: 'alarm.mp3',
     // 顯示未完成資料的名稱陣列
     list: [],
@@ -25,6 +28,12 @@ export default new Vuex.Store({
     // alarm: null
   },
   mutations: {
+    selectWork (state, data) {
+      state.work = data
+    },
+    selectRest (state, data) {
+      state.rest = data
+    },
     selectSound (state, data) {
       state.sound = data
     },
@@ -66,11 +75,9 @@ export default new Vuex.Store({
       } else {
         state.current = state.list.shift().name
         if (state.list.length > 0) {
-          console.log('one')
           state.currentNext = state.list[0].name
         } else {
-          console.log('two')
-          state.currentNext = '即將完成待辦事項'
+          state.currentNext = '即將完成所有待辦事項'
         }
       }
     },
@@ -90,7 +97,7 @@ export default new Vuex.Store({
       } else {
         state.currentNext = '已完成所有待辦事項'
       }
-      state.timeleft = state.isBreak ? timeBreak : time
+      state.timeleft = state.isBreak ? state.rest : state.work
     },
     delFinish (state, data) {
       state.finished.splice(data, 1)

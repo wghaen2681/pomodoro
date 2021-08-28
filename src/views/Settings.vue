@@ -7,28 +7,21 @@
       .container
         #working_time.mb-2.d-flex.justify-content-between
           div Working time
-          button
-            span.mr-2 25 min
-            font-awesome-icon(:icon='["fas", "chevron-down"]')
+          b-form-select#audioSetting(v-model="selected.work" :options="options.work" @change="selectWork")
         #resting_time.mb-2.d-flex.justify-content-between
           div Resting time
-          button
-            span.mr-2 5 min
-            font-awesome-icon(:icon='["fas", "chevron-down"]')
+          b-form-select#audioSetting(v-model="selected.rest" :options="options.rest" @change="selectRest")
     div
       .mb-3 Alarm
       .container
         #volume.mb-2.d-flex.justify-content-between
-          div Volume
-          button
-            span.mr-3 On
-            font-awesome-icon(:icon='["fas", "toggle-on"]')
+          div Sound
+          div(class="custom-control custom-switch")
+            input(type="checkbox" class="custom-control-input" id="customSwitch1" v-model="mute")
+            label(class="custom-control-label" for="customSwitch1")
         #audio.mb-2.d-flex.justify-content-between
           div Audio
-          b-form-select#audioSetting(v-model="selected" :options="options" @change="select")
-          //- button
-          //-   span.mr-2 basic
-          //-   font-awesome-icon(:icon='["fas", "chevron-down"]')
+          b-form-select#audioSetting(v-model="selected.sound" :options="options.sound" @change="selectSound")
 </template>
 
 <script>
@@ -41,23 +34,43 @@ export default {
   },
   data () {
     return {
+      options: {
+        work: [
+          { value: '10', text: '10 mins' },
+          { value: '15', text: '15 mins' },
+          { value: '20', text: '20 mins' },
+          { value: '25', text: '25 mins' }
+        ],
+        rest: [
+          { value: '5', text: '5 mins' },
+          { value: '10', text: '10 mins' },
+          { value: '15', text: '15 mins' },
+          { value: '20', text: '20 mins' }
+        ],
+        sound: [
+          { value: 'alarm.mp3', text: 'Alarm' },
+          { value: 'yay.mp3', text: 'Yay' }
+        ]
+      },
+      // 靜音開關
+      mute: 'true',
       // 音效選項
-      selected: 'alarm',
-      options: [
-        { value: 'alarm.mp3', text: 'Alarm' },
-        { value: 'yay.mp3', text: 'Yay' }
-      ]
-    }
-  },
-  computed: {
-    sound () {
-      return this.$store.state.sound
+      selected: {
+        work: this.$store.state.work,
+        rest: this.$store.state.rest,
+        sound: this.$store.state.sound
+      }
     }
   },
   methods: {
-    select () {
-      console.log(this.selected)
-      this.$store.commit('selectSound', this.selected)
+    selectWork () {
+      this.$store.commit('selectWork', this.selected.work)
+    },
+    selectRest () {
+      this.$store.commit('selectRest', this.selected.rest)
+    },
+    selectSound () {
+      this.$store.commit('selectSound', this.selected.sound)
     }
   }
 }

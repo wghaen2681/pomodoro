@@ -4,7 +4,7 @@
 
     #add_bar2
         b-form-input#b-form-input(v-model='newitem' :state='state' trim @keydown.enter='additem' placeholder="Add a new mission...")
-        font-awesome-icon(:icon='["fas", "plus"]' @click='additem')#btn_plus
+        font-awesome-icon#btn_plus(:icon='["fas", "plus"]' @click='additem')
 
     #chart
         #title
@@ -16,7 +16,7 @@
             //- font-awesome-icon#icon(:icon='["fas", "calendar-alt"]' style={color: 'white'})
             #month_control.d-inline-block
                 font-awesome-icon(:icon='["fas", "chevron-left"]')
-                span.px-3 June,28 2021
+                span.px-3 June, 28 2021
                 font-awesome-icon(:icon='["fas", "chevron-right"]')
 
         #frame
