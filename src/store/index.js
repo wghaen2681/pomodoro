@@ -29,11 +29,17 @@ export default new Vuex.Store({
       state.sound = data
     },
     addList (state, data) {
+      // 在待辦事項陣列中新增資料
       state.list.push({
         name: data,
         edit: false,
         model: data
       })
+
+      // 更改 currentNext 顯示狀態
+      if (state.list.length === 1) {
+        state.currentNext = state.list[0].name
+      }
     },
     editList (state, data) {
       state.list[data].edit = true
@@ -48,13 +54,24 @@ export default new Vuex.Store({
     },
     delList (state, data) {
       state.list.splice(data, 1)
+      if (state.list.length === 0) {
+        state.currentNext = '已完成所有待辦事項'
+      } else {
+        state.currentNext = state.list[0].name
+      }
     },
     start (state) {
       if (state.isBreak) {
         state.current = '休息一下'
       } else {
         state.current = state.list.shift().name
-        state.currentNext = state.list[0].name
+        if (state.list.length > 0) {
+          console.log('one')
+          state.currentNext = state.list[0].name
+        } else {
+          console.log('two')
+          state.currentNext = '即將完成待辦事項'
+        }
       }
     },
     changeStatus (state, data) {
@@ -70,6 +87,8 @@ export default new Vuex.Store({
       state.current = ''
       if (state.list.length > 0) {
         state.isBreak = !state.isBreak
+      } else {
+        state.currentNext = '已完成所有待辦事項'
       }
       state.timeleft = state.isBreak ? timeBreak : time
     },

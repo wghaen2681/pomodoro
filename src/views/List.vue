@@ -111,7 +111,6 @@ export default {
       this.$store.commit('editList', index)
     },
     changelist (index) {
-      console.log(index)
       if (this.list[index].state) {
         this.$store.commit('changeList', index)
       }

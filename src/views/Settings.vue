@@ -25,10 +25,10 @@
             font-awesome-icon(:icon='["fas", "toggle-on"]')
         #audio.mb-2.d-flex.justify-content-between
           div Audio
-          b-form-select(v-model="selected" :options="options")
-          button
-            span.mr-2 basic
-            font-awesome-icon(:icon='["fas", "chevron-down"]')
+          b-form-select#audioSetting(v-model="selected" :options="options" @change="select")
+          //- button
+          //-   span.mr-2 basic
+          //-   font-awesome-icon(:icon='["fas", "chevron-down"]')
 </template>
 
 <script>
@@ -41,21 +41,11 @@ export default {
   },
   data () {
     return {
-      items: [
-        { name: '鈴聲', src: 'alarm.mp3' },
-        { name: 'Yay', src: 'yay.mp3' }
-      ],
-      fields: [
-        { key: 'name', label: '名稱' },
-        { key: 'src', label: '試聽' },
-        { key: 'select', label: '選擇' }
-      ],
-
       // 音效選項
-      selected: null,
+      selected: 'alarm',
       options: [
-        { value: null, text: 'Please select some item' },
-        { value: 'a', text: 'This is First option' }
+        { value: 'alarm.mp3', text: 'Alarm' },
+        { value: 'yay.mp3', text: 'Yay' }
       ]
     }
   },
@@ -65,8 +55,9 @@ export default {
     }
   },
   methods: {
-    select (item) {
-      this.$store.commit('selectSound', item.src)
+    select () {
+      console.log(this.selected)
+      this.$store.commit('selectSound', this.selected)
     }
   }
 }
