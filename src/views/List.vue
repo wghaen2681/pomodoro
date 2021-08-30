@@ -15,9 +15,9 @@
       //- 行內樣式
       //- font-awesome-icon#icon(:icon='["fas", "calendar-alt"]' style={color: 'white'})
       #month_control.d-inline-block
-        font-awesome-icon(:icon='["fas", "chevron-left"]')
+        font-awesome-icon(:icon='["fas", "chevron-left"]' @click="subtractDate")
         span.px-3 {{ context.activeFormatted }}
-        font-awesome-icon(:icon='["fas", "chevron-right"]')
+        font-awesome-icon(:icon='["fas", "chevron-right"]' @click="addDate")
 
     #frame
       .text-center.my-5(v-if="this.$store.state.list.length <= 0 && this.$store.state.finished.length <= 0") 目前沒有任何待辦事項
@@ -123,6 +123,24 @@ export default {
     },
     onContext (ctx) {
       this.context = ctx
+    },
+    subtractDate () {
+      const date = this.context.activeDate
+      let day = date.getDate()
+      day--
+      date.setDate(day)
+      this.context.activeDate = date
+      const weekDayFormat = ['日', '一', '二', '三', '四', '五', '六']
+      this.context.activeFormatted = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 星期${weekDayFormat[date.getDay()]}`
+    },
+    addDate () {
+      const date = this.context.activeDate
+      let day = date.getDate()
+      day++
+      date.setDate(day)
+      this.context.activeDate = date
+      const weekDayFormat = ['日', '一', '二', '三', '四', '五', '六']
+      this.context.activeFormatted = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 星期${weekDayFormat[date.getDay()]}`
     },
     editlist (index) {
       this.$store.commit('editList', index)
