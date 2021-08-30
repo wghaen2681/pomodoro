@@ -17,11 +17,11 @@
         #volume.mb-2.d-flex.justify-content-between
           div Sound
           div(class="custom-control custom-switch")
-            input(type="checkbox" class="custom-control-input" id="customSwitch1" v-model="mute")
+            input(type="checkbox" class="custom-control-input" id="customSwitch1" v-model="selected.sound" @change="selectSound")
             label(class="custom-control-label" for="customSwitch1")
         #audio.mb-2.d-flex.justify-content-between
-          div Audio
-          b-form-select#audioSetting(v-model="selected.sound" :options="options.sound" @change="selectSound")
+          div Music
+          b-form-select#audioSetting(v-model="selected.music" :options="options.sound" @change="selectMusic")
 </template>
 
 <script>
@@ -34,6 +34,7 @@ export default {
   },
   data () {
     return {
+      // 設定選項
       options: {
         work: [
           { value: '10', text: '10 mins' },
@@ -52,13 +53,13 @@ export default {
           { value: 'yay.mp3', text: 'Yay' }
         ]
       },
-      // 靜音開關
-      mute: 'true',
-      // 音效選項
+
+      // 設定資料
       selected: {
         work: this.$store.state.work,
         rest: this.$store.state.rest,
-        sound: this.$store.state.sound
+        sound: this.$store.state.sound,
+        music: this.$store.state.music
       }
     }
   },
@@ -71,6 +72,9 @@ export default {
     },
     selectSound () {
       this.$store.commit('selectSound', this.selected.sound)
+    },
+    selectMusic () {
+      this.$store.commit('selectMusic', this.selected.music)
     }
   }
 }

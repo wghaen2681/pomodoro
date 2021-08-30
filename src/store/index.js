@@ -11,21 +11,15 @@ export default new Vuex.Store({
   state: {
     work: time,
     rest: timeBreak,
-    mute: false,
-    sound: 'alarm.mp3',
-    // 顯示未完成資料的名稱陣列
-    list: [],
-    // 顯示已完成資料的名稱陣列
-    finished: [],
+    sound: false, // true = 開啟音效（非靜音）; false = 關閉音效（靜音）
+    music: 'alarm.mp3',
+    list: [], // 顯示未完成資料的名稱陣列
+    finished: [], // 顯示已完成資料的名稱陣列
     current: '',
     currentNext: '',
     timeleft: time,
     isBreak: false,
-    // 0 = 停止
-    // 1 = 倒數中
-    // 2 = 暫停
-    status: 0
-    // alarm: null
+    status: 0 // 0 = 停止 ; 1 = 倒數中 ; 2 = 暫停
   },
   mutations: {
     selectWork (state, data) {
@@ -36,6 +30,9 @@ export default new Vuex.Store({
     },
     selectSound (state, data) {
       state.sound = data
+    },
+    selectMusic (state, data) {
+      state.music = data
     },
     addList (state, data) {
       // 在待辦事項陣列中新增資料
@@ -115,9 +112,6 @@ export default new Vuex.Store({
         state.finished.splice(data, 1)
       }
     }
-    // changeAlarm (state, data) {
-    //   state.alarm = data
-    // }
   },
   getters: {
     list (state) {

@@ -130,11 +130,13 @@ export default {
       this.$store.commit('changeStatus', 0)
       this.$store.commit('addFinish')
 
-      if (!skip) {
-        const audio = new Audio()
-        if (this.$store.state.sound !== 'mute') {
-          audio.src = require('../assets/' + this.$store.state.sound)
-          audio.play()
+      if (this.$store.state.sound) {
+        if (!skip) {
+          const audio = new Audio()
+          if (this.$store.state.music !== 'mute') {
+            audio.src = require('../assets/' + this.$store.state.music)
+            audio.play()
+          }
         }
       }
 
