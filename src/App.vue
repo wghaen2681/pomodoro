@@ -1,7 +1,8 @@
 <template lang="pug">
 #app
   Header
-  router-view/
+  keep-alive
+    router-view
 </template>
 
 <script>
