@@ -10,8 +10,8 @@
 
     //- 鬧鐘播放控制器
     #player.d-flex.flex-row.justify-content-around
-      .m-3#alarm(v-if='alarm' @click='alarm(false)')
-      .m-3#mute(v-if='!alarm' @click='alarm(true)')
+      .m-3#alarm(v-if='!sound' @click='selectSound(true)')
+      .m-3#mute(v-if='sound' @click='selectSound(false)')
       .m-3#play(v-if='status !== 1' @click='start')
       .m-3#pause(v-if='status === 1' @click='pause')
       .m-3#skip(v-if='current.length > 0' @click='finish(true)')
@@ -104,6 +104,9 @@ export default {
     timeSecond () {
       const s = Math.floor(this.timeleft % 60)
       return s
+    },
+    sound () {
+      return this.$store.state.sound
     }
   },
   methods: {
@@ -150,11 +153,10 @@ export default {
         })
       }
     },
-    alarm (index) {
-      console.log(this.$store.state.alarm)
-      // console.log('yes', index)
-      // this.$store.commit('changeAlarm', index)
-      // console.log('no', this.$store.state.alarm)
+    selectSound (index) {
+      console.log('yes')
+      console.log(index)
+      this.$store.commit('selectSound', index)
     }
   }
 }

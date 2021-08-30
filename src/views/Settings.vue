@@ -17,7 +17,7 @@
         #volume.mb-2.d-flex.justify-content-between
           div Sound
           div(class="custom-control custom-switch")
-            input(type="checkbox" class="custom-control-input" id="customSwitch1" v-model="selected.sound" @change="selectSound")
+            input(type="checkbox" class="custom-control-input" id="customSwitch1" v-model="sound" @change="selectSound")
             label(class="custom-control-label" for="customSwitch1")
         #audio.mb-2.d-flex.justify-content-between
           div Music
@@ -58,9 +58,13 @@ export default {
       selected: {
         work: this.$store.state.work,
         rest: this.$store.state.rest,
-        sound: this.$store.state.sound,
         music: this.$store.state.music
       }
+    }
+  },
+  computed: {
+    sound () {
+      return this.$store.state.sound
     }
   },
   methods: {

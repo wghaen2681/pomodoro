@@ -324,9 +324,7 @@
           position relative
           top 50%
           left 50%
-          transform translate(-50%, -50%)
-          width 180px
-          // color var(--gold)
+          transform translate(-51%, -50%)
           line-height 6vh
 
       #frame
@@ -341,6 +339,16 @@
 
         table
           color var(--gold)
+
+    #calendar
+      position absolute
+      left 69vw
+      top 26vh
+      background white
+
+      .col-md-auto {
+        padding 0
+      }
 
   #chart
     #data
